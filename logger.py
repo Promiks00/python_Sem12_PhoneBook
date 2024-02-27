@@ -36,7 +36,12 @@ def print_data():
             if data_first[i] == '\n' or i == len(data_first) - 1:
                 data_first_list.append(''.join(data_first[j:i + 1]))
                 j = i
-        print(''.join(data_first_list))
+        data_first_list_final = []
+
+        for i in range(len(data_first_list)):  # Удаляем дублирующиеся переносы строк в списке
+            if data_first_list[i] != '\n\n':
+                data_first_list_final.append(data_first_list[i])
+        print(''.join(data_first_list_final))
 
     print("Вывожу данные из 2-ого файла: \n")
     with open('data_second_variant.csv', 'r', encoding='utf-8') as f:
