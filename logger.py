@@ -105,7 +105,6 @@ def remove_data():
     if var == 1:
         with open('data_first_variant.csv', 'r', encoding='utf-8') as f:
             data_first = f.readlines()
-            print(data_first)
             j = 0
             data_first_list = []
             for i in range(len(data_first)):
@@ -116,9 +115,7 @@ def remove_data():
             for i in range(len(data_first_list)):  # Удаляем дублирующиеся переносы строк в списке
                 if data_first_list[i] != '\n\n':
                     data_first_list_final.append(data_first_list[i])
-            print(data_first_list_final)
             data_first_list2 = data_first_list_final[:n - 1] + data_first_list_final[n:]
-            print(data_first_list2)
         with open('data_first_variant.csv', 'w', encoding='utf-8') as f:
             f.writelines(data_first_list2)
     elif var == 2:
