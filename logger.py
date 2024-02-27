@@ -85,9 +85,6 @@ def change_data():
             f.writelines(data_second_list)
 
 
-# change_data()
-
-
 def remove_data():
     var = int(input(f"В каком файле удалить запись?\n\n"
                     f"1 Вариант (Файл 'data_first_variant.csv'): \n"
@@ -124,7 +121,3 @@ def remove_data():
             data_second_list = data_second[:n - 1] + data_second[n:]
         with open('data_second_variant.csv', 'w', encoding='utf-8') as f:
             f.writelines(data_second_list)
-
-
-
-
